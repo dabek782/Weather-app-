@@ -8,6 +8,7 @@
   background-size: cover;
   background-position: center;
 
+
  }
  *{
   margin: 0;
@@ -28,11 +29,11 @@
   
 
  }
- .bi-bi-search{
+ .search-button{
     background-color:rgba(255, 255, 255,0.2) ;
     margin-left: 5px;
     border: 1px solid rgba(255, 255, 255, 0.4) ;
-    border-radius:10px ;
+    border-radius:15px ;
 
  }
  input{
@@ -41,6 +42,7 @@
   color: black;
   border-radius:15px ;
   border: 1px solid rgba(255, 255, 255, 0.4) ;
+  text-align: center;
 
  }
  .bottom{
@@ -53,6 +55,8 @@
   border-radius: 15px;
 
  }
+
+ 
  .name{
   background-color: rgba(255, 255, 255, 0.4);
   border: 3px solid black;
@@ -132,3 +136,61 @@
 ::placeholder::after{
   text-align: center;
 }
+#text{
+  display: none;
+
+}
+ @media (max-width:898px) {
+  body{
+    background-image: url('src/assets/pexels-summerstock-325117.jpg');
+    height: 100dvb;
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+
+  }
+  .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 5%;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    align-items: stretch;
+
+
+   }
+   input{
+    width: 50%;
+    background-color:rgba(255, 255, 255, 0.5) ;
+    color: black;
+    border-radius:15px ;
+    border: 1px solid rgba(255, 255, 255, 0.4) ;
+    text-align: center;
+    display: flex;
+    flex: 0.8;
+    padding-right: 5px;
+   }
+
+  
+  .bottom{
+    display: flex;
+    height: 80dvh;
+    width: 100%;
+    flex-direction: column;
+  }
+  .bottom > div{
+    width: 40%;
+    height: 40%;
+    margin: 30px;
+  }
+  .name{
+    margin-top: 0;
+  }
+  #text{
+    display: none;
+
+  }
+ }

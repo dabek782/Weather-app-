@@ -10,7 +10,7 @@ function App() {
   // Function to fetch weather data
   const fetchWeather = async () => {
     try {
-      const apiKey = '95c00f3c68dc7991df6415a169879b62';
+      const apiKey = '2afa545da3e7faafaa6861ab82bc83ae';
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`; // Added `units=metric` to get temperature in Celsius
       const response = await axios.get(url);
       setWeather(response.data);  // Store fetched weather data in state
@@ -37,8 +37,8 @@ function App() {
           value={city}
           onChange={handleCityChange}
         />
-        <button onClick={fetchWeather}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+        <button className="search-button" onClick={fetchWeather}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" >
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
           </svg>
         </button>
@@ -73,7 +73,7 @@ function App() {
             </div>
           </>
         ) : (
-          <p>Enter a city and click search to see the weather</p>
+          <p id="text">Enter a city and click search to see the weather</p>
         )}
       </div>
     </div>
