@@ -10,7 +10,7 @@ function App() {
   // Function to fetch weather data
   const fetchWeather = async () => {
     try {
-      const apiKey = '95c00f3c68dc7991df6415a169879b62';
+      const apiKey = 'apikey';
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`; // Added `units=metric` to get temperature in Celsius
       const response = await axios.get(url);
       setWeather(response.data);  // Store fetched weather data in state
