@@ -71,6 +71,10 @@ function App() {
               <p>Sunset:</p>
               <p>{new Date(weather.sys.sunset * 1000).toLocaleTimeString()}</p>
             </div>
+              <div className="condition">
+              <p>Condition:</p>
+              <p>{weather.weather[0].main}</p>
+            </div>
           </>
         ) : (
           <p id="text">Enter a city and click search to see the weather</p>
